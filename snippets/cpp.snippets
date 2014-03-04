@@ -32,46 +32,32 @@ snippet fori
 	for (int ${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
 		${4:/* code */}
 	}
-
 snippet dety
 	#define DEBUG_TYPE "${1:`Filename('','debug_type')`}"
-
 snippet dbg
 	DEBUG(errs() << "${1}\n");
-
 snippet dbgt
 	DEBUG_WITH_TYPE("${1:type}", errs() << ${2} << "\n" );
-
 snippet dm
 	DenseMap<${1:key}, ${2:value}> ${3}
-
 snippet ds
 	DenseSet<${1:value}> ${2}
-
 snippet sv
 	SmallVector<${1:elTy}, ${2:elCnt}> ${3}
-
 snippet ll
 	llvm::${1}
-
 snippet bb
 	BasicBlock ${1}
-
 snippet inst
 	Instruction ${1}
-
 snippet func
 	Function ${1}
-
 snippet err
 	errs() << ${1};
-
 snippet out
 	outs() << ${1};
-
 snippet auto
 	auto ${1:name} = ${2}
-
 snippet fora
 	for (auto ${1:name} : ${2}) {
 	  ${3}
