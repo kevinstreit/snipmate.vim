@@ -1,0 +1,105 @@
+# main()
+snippet main
+	fn main() {
+		${1}
+	}
+snippet extc
+	extern crate ${1}
+# If Condition
+snippet if
+	if ${1:/* condition */} {
+		${2:/* code */}
+	}
+snippet el
+	else {
+		${1}
+	}
+# While Loop
+snippet wh
+	while ${1:/* condition */} {
+		${2:/* code */}
+	}
+snippet lwh
+	'${1:label} while ${2:/* condition */} {
+		${3:/* code */}
+	}
+# Endless Loop
+snippet lo
+	loop {
+		${1:/* code */}
+	}
+snippet llo
+	'${1:label} loop {
+		${2:/* code */}
+	}
+# For Loop
+snippet for
+	for ${1:val} in ${2:it} {
+		${3:/* code */}
+	}
+snippet forr
+	for ${1:val} in range(${2:start}, ${3:end}) {
+		${4:/* code */}
+	}
+snippet lfor
+	'${1:label} for ${2:val} in ${3:it} {
+		${4:/* code */}
+	}
+snippet lforr
+	'${1:label} for ${2:val} in range(${3:start}, ${4:end}) {
+		${5:/* code */}
+	}
+snippet match
+	match ${1:expr} {
+		${2:clause} => ${3:expr}
+	}
+	${4}
+# Function
+snippet fun
+	fn ${1:name}(${2}) {
+		${3:/* code */}
+	}
+snippet funr
+	fn ${1:name}(${2}) -> ${3} {
+		${4:/* code */}
+	}
+snippet lam
+	|${1:args...}| {
+		${2:/* code */}
+	}
+snippet lamr
+	|${1:args...}| -> ${2:ret} {
+		${3:/* code */}
+	}
+# Struct
+snippet st
+	struct ${1:name} {
+		${2:/* data */}
+	}${3}
+snippet stu
+	struct ${1:name};${3}
+snippet stt
+	struct (${1:fields});${3}
+snippet enum
+	enum ${1:name} {
+		${2:fields...}
+	}${3}
+snippet pr
+	print!("${1}"${2});${3}
+snippet prl
+	println!("${1}"${2});${3}
+snippet todo
+	// TODO ${1} (Kevin Streit: `system("date +%Y-%m-%d")`)${2}
+snippet fixme
+	// FIXME ${1} (Kevin Streit: `system("date +%Y-%m-%d")`)${2}
+snippet fhdr
+	/*
+	 *    Filename: `expand('%:t')`
+	 *  Created on: `system("date +%Y-%m-%d")`
+	 *      Author: Kevin Streit <streit@mailbox.org>
+	 *
+	 *  ${1}
+	 *
+	 *  Copyright `system("date +%Y")` Kevin Streit
+	 */
+	 ${2}
